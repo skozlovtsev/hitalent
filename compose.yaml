@@ -1,4 +1,17 @@
 services:
   booking:
+    environment:
+      PG_HOST: postgres
+      PG_USER: postgres
+      PG_PASSWORD: postgres
+      PG_DB: postgres
+      POST_PORT: 5432
+      GOSERVER_PORT: :3000
   postgeres:
-    image: "postgresql:latest"
+    image: postgres:lates
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
